@@ -15,16 +15,16 @@ data$length <- period_to_seconds(data$length)
 
 
 
-linreg <- ggplot(data, aes(length, views)) +
+Graph_3 <- ggplot(data, aes(length, views)) +
   geom_point() +
   geom_smooth(method="lm") +
   xlab("Length of Video") +
-  ylab("Views")
-
-print(linreg)
-
-
-data$length_value <- as.numeric(data$length)
+  ylab("Views") +
+  ggtitle("Video Views vs. Video Length")
 
 
-saveRDS(figure3,here::here("output/figure3.rds"))
+ggsave(
+  "output/angelo_analysis.png",
+  plot = Graph_3,
+  device = "png"
+)
