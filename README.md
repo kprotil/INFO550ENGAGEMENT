@@ -6,7 +6,7 @@
 -   angelo\_analysis.R: generates Video Views vs. Video Length figure
 -   chang\_summary.R: generates Table 1. Summary Statistics of videos
     and Histogram of total length by topic figure
--   karl\_analysis: generates figure of video number and engagement
+-   karl\_analysis.R: generates figure of video number and engagement
 
 ## Generating Tables & Figures
 
