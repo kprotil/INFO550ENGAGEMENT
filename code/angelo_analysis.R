@@ -6,8 +6,7 @@ library(lubridate)
 here::i_am("code/angelo_analysis.R")
 
 
-
-data <- read.csv("data/course_engagement.csv")
+data <- read.csv(here::here("data/course_engagement.csv"))
 
 data$length <- ms(data$length)
 data$length <- period_to_seconds(data$length)  

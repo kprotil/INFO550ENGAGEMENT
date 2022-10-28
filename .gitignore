@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+README.Rmd
+code/renderreports.R

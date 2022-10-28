@@ -2,12 +2,30 @@
 title: "README"
 author: "Melissa Chapnick"
 date: "2022-10-27"
-output: html_document
+output: 
+  md_document:
+  variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## README
+## Repository Contents
+
+1) Data - data for these analyses lives here!
+2) Code - folder w/Rscripts to generate tables & figures.
+  - angelo_analysis.R: generates Video Views vs. Video Length figure
+  - chang_summary.R: generates Table 1. Summary Statistics of videos and Histogram of total length by topic figure
+  - karl_analysis: generates figure of video number and
+engagement
+  
+## Generating Tables & Figures
+
+To build, run each Rscript in the "code" folder. 
+
+Table and figure outputs will appear in the "output" folder.
+
+
+
 
