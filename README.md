@@ -13,3 +13,7 @@
 To build, run each Rscript in the “code” folder.
 
 Table and figure outputs will appear in the “output” folder.
+
+## Restore R Package Environment
+
+To restore R package environment, run "make install" in the terminal.
