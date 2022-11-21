@@ -1,10 +1,42 @@
 ---
-title: "report"
-author: "Melissa Chapnick"
-date: "2022-11-21"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+here::i_am("INFO 550 Engagement/report.Rmd")
+```
+
+## Tabular Analysis
+Here we report characteristics of each video. 
+
+```{r}
+readRDS(file=here::here("INFO 550 Engagement/output/table1.rds"))
+```
+
+
+## Graphical Analysis
+Here is Figure 1. Histogram of total length by topic.
+
+```{r}
+readRDS(file=here::here("INFO 550 Engagement/output/figure1.rds"))
+```
+
+Here is Angelo analysis. 
+
+```{r}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(here::here("INFO 550 Engagement/output/angelo_analysis.png"))
+```
+
+Here is Karl analysis.
+
+```{r}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(here::here("INFO 550 Engagement/output/karl_analysis.png"))
 ```
