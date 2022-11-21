@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 report: report.Rmd code/render_report.R data/course_engagement.csv karl_figures chang_figures angelo_figures
 	Rscript code/render_report.R
 
@@ -16,7 +14,6 @@ angelo_figures: code/angelo_analysis.R data/course_engagement.csv
 clean:
 	rm -f output/*.rds && rm -f report.html && rm -f output/*.png
 
->>>>>>> karlupdates
 .PHONY: install
 install: 
 	Rscript -e "renv::restore(prompt = FALSE)"
