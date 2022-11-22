@@ -7,8 +7,11 @@ library(lubridate)
 rm(list=ls())
 here::i_am("code/chang_summary.R")
 
+WHICH_CONFIG<-Sys.getenv("WHICH_CONFIG")
+config_list<-config::get(config=WHICH_CONFIG)
+
 # load data
-data <- readRDS(file="output/data_clean.rds")
+data <- readRDS(file=paste0("output/",config_list$file))
 
 # clean the names for video topic
 data$topic[data$topic=="course_logistics"]<-"Logistics"
@@ -30,7 +33,7 @@ var_label(data) <- list(
   length="Length (min)")
 
 # table 1 to summarize for each topic
-table1<-tbl_summary(data[,c("topic","views","unique_viewers","length")],by = topic) %>%
+table1<-tbl_summary(data[,c("topic","views","unique_viewers","length")],by = topic,type = where(is.numeric) ~ "continuous") %>%
   add_p() %>%
   bold_p() %>%
   modify_header(label = "**Variable**") %>%

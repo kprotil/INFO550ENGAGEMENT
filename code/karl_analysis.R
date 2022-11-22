@@ -1,6 +1,9 @@
 here::i_am("code/karl_analysis.R")
 
-data <- readRDS(file="output/data_clean.rds")
+WHICH_CONFIG<-Sys.getenv("WHICH_CONFIG")
+config_list<-config::get(config=WHICH_CONFIG)
+
+data <- readRDS(file=paste0("output/",config_list$file))
 
 data$engagement <- data$unique_viewers/47
 
