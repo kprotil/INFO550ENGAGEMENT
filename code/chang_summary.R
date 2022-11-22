@@ -8,7 +8,7 @@ rm(list=ls())
 here::i_am("code/chang_summary.R")
 
 # load data
-data<-read.csv(here::here("data/course_engagement.csv"),stringsAsFactors=F)
+data <- readRDS(file="output/data_clean.rds")
 
 # clean the names for video topic
 data$topic[data$topic=="course_logistics"]<-"Logistics"
