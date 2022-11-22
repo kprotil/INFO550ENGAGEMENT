@@ -5,7 +5,10 @@ library(lubridate)
 #Locate Data in the Code Folder
 here::i_am("code/angelo_analysis.R")
 
-data <- readRDS(file="output/data_clean.rds")
+WHICH_CONFIG<-Sys.getenv("WHICH_CONFIG")
+config_list<-config::get(config=WHICH_CONFIG)
+
+data <- readRDS(file=paste0("output/",config_list$file))
 
 data$length <- ms(data$length)
 data$length <- period_to_seconds(data$length)  
