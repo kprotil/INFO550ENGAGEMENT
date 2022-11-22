@@ -5,8 +5,7 @@ library(lubridate)
 #Locate Data in the Code Folder
 here::i_am("code/angelo_analysis.R")
 
-
-data <- read.csv(here::here("data/course_engagement.csv"))
+data <- readRDS(file="output/data_clean.rds")
 
 data$length <- ms(data$length)
 data$length <- period_to_seconds(data$length)  

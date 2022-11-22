@@ -1,6 +1,6 @@
 here::i_am("code/karl_analysis.R")
 
-data <- read.csv("data/course_engagement.csv")
+data <- readRDS(file="output/data_clean.rds")
 
 data$engagement <- data$unique_viewers/47
 
