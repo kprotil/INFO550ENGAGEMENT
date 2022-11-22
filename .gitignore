@@ -3,7 +3,9 @@
 .RData
 .Ruserdata
 README.Rmd
-code/renderreports.R
-output/*.png
-output/*.rds
 report.html
+code/renderreports.R
+output/angelo_analysis.png
+output/figure1.rds
+output/karl_analysis.png
+output/table1.rds
