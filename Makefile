@@ -1,7 +1,7 @@
-report: report.Rmd code/render_report.R output/data_clean.rds karl_figures chang_figures angelo_figures
+report: report.Rmd code/render_report.R data_clean_normal karl_figures chang_figures angelo_figures
 	Rscript code/render_report.R
 
-report_param: report.Rmd code/render_report.R code/data_clean_param.R data/course_engagement.csv karl_figures chang_figures angelo_figures
+report_param: report.Rmd code/render_report.R data_clean_param data/course_engagement.csv karl_figures chang_figures angelo_figures
 	Rscript code/render_report.R
 
 karl_figures: code/karl_analysis.R data/course_engagement.csv
