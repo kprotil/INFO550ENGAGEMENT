@@ -5,3 +5,5 @@
 README.Rmd
 code/renderreports.R
 output/*.png
+output/*.rds
+report.html

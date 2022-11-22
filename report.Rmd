@@ -3,40 +3,56 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = F)
 ```
 
 ```{r}
-here::i_am("INFO 550 Engagement/report.Rmd")
+here::i_am("INFO550ENGAGEMENT/report.Rmd")
 ```
+### **Engagement Report Group 8**
+**Angelo Marra, Chang Liu, Karl Protil III, Melissa Chapnick**
+\
+\
+This analysis explored relationships between factors such as video length and video number with video views among students in the INFO 550 course.
+\
+\
 
-## Tabular Analysis
-Here we report characteristics of each video. 
-
+#### **Tabular Analysis**
+\
+Table 1 reports characteristics of course videos by topic including # of views, # of unique viewers, and video length in minutes. 
+\
+\
 ```{r}
-readRDS(file=here::here("INFO 550 Engagement/output/table1.rds"))
+readRDS(file=here::here("INFO550ENGAGEMENT/output/table1.rds"))
 ```
+\
+\
 
-
-## Graphical Analysis
-Here is Figure 1. Histogram of total length by topic.
-
+#### **Graphical Analysis**
+\
+Figure 1 displays the average total length of videos by topic. 
+\
+\
 ```{r}
-readRDS(file=here::here("INFO 550 Engagement/output/figure1.rds"))
+readRDS(file=here::here("INFO550ENGAGEMENT/output/figure1.rds"))
 ```
-
-Here is Angelo analysis. 
-
+\
+\
+Figure 2 displays the relationship between # of video views by video length. We see there is a slight positive correlation between video views and video length. 
+\
+\
 ```{r}
 #| fig.align = "center",
 #| out.width = "600px"
-knitr::include_graphics(here::here("INFO 550 Engagement/output/angelo_analysis.png"))
+knitr::include_graphics(here::here("INFO550ENGAGEMENT/output/angelo_analysis.png"))
 ```
-
-Here is Karl analysis.
-
+\
+\
+Figure 3 displays the relationship between the number of videos per topic and proportion of students who engaged with the videos. We see a slight negative correlation between number of videos and engagement. 
+\
+\
 ```{r}
 #| fig.align = "center",
 #| out.width = "600px"
-knitr::include_graphics(here::here("INFO 550 Engagement/output/karl_analysis.png"))
+knitr::include_graphics(here::here("INFO550ENGAGEMENT/output/karl_analysis.png"))
 ```
